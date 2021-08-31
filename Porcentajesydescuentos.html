@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Esta es mi app de calcular el descuento de un precio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Percentage and Discount</title>
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/Jefersonsteven/math-aplication-JS-PD/main/public/assets/img/logo.png" alt="logo">
+        <h1>Percentage and Discount</h1>
+    </header>
+
+    <p class="card-container__title">Calculate Discount</p>
+    <section class="card-container-calculate">
+        <form class="card-container__form">
+            <input class="card-container__form--input-price" id="inputPrice" type="number" placeholder="Escribe el precio de tu producto">
+            <input class="card-container__form--input-discount" id="inputDiscount" type="number" placeholder="Escribe el descuento de tu producto">
+            <div>
+                <label for="cupons">Cupones: </label>
+                <select class="cupons" name="Cupons" id="cupons">
+                <option value="0">No tengo</option>
+                <option value="10">-10%</option>
+                <option value="25">-25%</option>
+                <option value="50">-50%</option>
+                </select>
+            </div>
+            <button type="button" onclick="onClickButtonPriceDiscount()">Calcular</button>
+        </form>
+    </section>
+
+    <section class="card-container-product">
+        <article class="card-container-product__item">
+            <div class="card-container-product__item--p1">
+                <h3 class="card-container-product__item--title">Product</h3>
+                <h3 id="displayPercentageDiscount">-00%</h3>
+            </div>
+            <div class="card-container-product__item--container-imagen">
+                <img src="https://raw.githubusercontent.com/Jefersonsteven/math-aplication-JS-PD/main/public/assets/img/reloj%201.png" alt="reloj">
+            </div>
+            <div class="card-container-product__item--p2">
+                <h3 id="displayPrice" style="text-decoration:line-through" >$0000</h3>
+                <h3 id="displayDiscount">$0000</h3>
+            </div>
+        </article>
+        <p class="displayValueDiscount" id="displayValueDiscount">Esto es lo que haz ahorrado:</p>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>
